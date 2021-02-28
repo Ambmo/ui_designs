@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
+class Home extends StatelessWidget {
+  final String id = 'Home';
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         body: ListView(
           children: [
             Column(
@@ -80,7 +82,9 @@ class MyApp extends StatelessWidget {
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(50.0),
                   child: MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/second');
+                    },
                     minWidth: 150.0,
                     height: 50.0,
                     child: Text(
